@@ -4,7 +4,7 @@ a = int(input("Enter your age: "))
 if(a%2 == 0):
     print("a is even")
 
-# End of If statement no : 1
+# End of If statement no : 1 
 
 # If statement no : 2
 if(a>=18):
@@ -16,6 +16,7 @@ elif(a<0):
 
 else:
     print("You are below the age of consent")
+    
  # End of If statement no : 2
 
 
