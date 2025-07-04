@@ -1,1 +1,1 @@
-# Write a python function which converts inches to cms.
+# Write a python function which converts inches to cms
