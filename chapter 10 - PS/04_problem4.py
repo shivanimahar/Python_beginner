@@ -1,4 +1,5 @@
 # 4. Add a static method in problem 2, to greet the user with hello.
+
 class Calculator:
     def __init__(self, n):
         self.n = n
