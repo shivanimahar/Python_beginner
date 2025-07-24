@@ -9,12 +9,9 @@ class Employee:
     def name(self):
         return self.ename
     
-
     @name.setter
     def name(self,value):
         self.ename = value
-
-
 
 e = Employee()
 e.a = 45
