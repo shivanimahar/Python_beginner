@@ -29,6 +29,7 @@ print("True or True is ", True or True)
 print("False or True is ", False or True)
 print("False or False is ", False or False)
 
+
 # Truth table of 'and'
 print("True and False is ", True and False)
 print("True and True is ", True and True)
