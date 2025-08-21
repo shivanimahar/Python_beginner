@@ -10,6 +10,9 @@ engine = pyttsx3.init()
 def speak(text):
     engine.say(text)
     engine.runAndWait()
+    
+def processCommand(c):
+    pass
 
 if __name__ == "__main__":
     speak("Initializing Jarvis...")
@@ -17,16 +20,23 @@ if __name__ == "__main__":
         # Listen for the wake word "Jarvis"
         # # obtain audio from the microphone
         r = sr.Recognizer()
-        with sr.Microphone() as source:
-            print("Listening...")
-            audio = r.listen(source)
-
+        
         print("recognizing...")
         try:
-            command = r.recognize_google(audio)
-            print(command)
-        except sr.UnknownValueError:
-            print("Sphinx could not understand audio")
-        except sr.RequestError as e:
-            print("Sphinx error; {0}".format(e))
+            with sr.Microphone() as source:
+                print("Listening...")
+                audio = r.listen(source, timeout=2, phrase_time_limit=1)
+            word = r.recognize_google(audio)
+            if(word.lower() == "jarvis"):
+                speak("Ya")
+                # Listen for command
+                with sr.Microphone() as source:
+                    print("jarvis active...")
+                    audio = r.listen(source)
+                    command = r.recognize_google(audio)
+
+                    processCommand()
+
+        except Exception as e:
+            print("Error; {0}".format(e))
             
