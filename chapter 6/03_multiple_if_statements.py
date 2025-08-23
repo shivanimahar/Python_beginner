@@ -20,4 +20,4 @@ else:
  # End of If statement no : 2
 
 
-print("end of program")
+print("end of the program")
