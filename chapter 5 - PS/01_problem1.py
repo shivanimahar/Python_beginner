@@ -2,7 +2,8 @@
 words = {
     "madad": "help",
     "kursi": "chair",
-    "billi": "cat"
+    "billi": "cat",
+    "notebook": "kitab"
 }
 
 word = input("enter the word you want meaning of: ")
